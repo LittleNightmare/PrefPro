@@ -303,7 +303,7 @@ public unsafe class PrefPro : IDalamudPlugin
         var name = _configuration.Name;
         var split = name.Split(' ');
         var first = split[0];
-        var last = split[1];
+        var last = (split.Length > 1) ? split[1] : "";
 
         return setting switch
         {
